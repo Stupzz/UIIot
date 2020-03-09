@@ -5,23 +5,39 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AjouterBacComponent} from './pages/ajouter-bac/ajouter-bac.component';
 import {RouterModule, Routes} from '@angular/router';
-import {AjouterPlanteComponent} from './pages/ajouter-plante/ajouter-plante.component';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { EditeBacComponent } from './pages/edite-bac/edite-bac.component';
+import { CaptorFormComponent } from './pages/captor-form/captor-form.component';
+import { JardinComponent } from './pages/jardin/jardin.component';
+import { BacComponentComponent } from './components/bac-component/bac-component.component';
+import { HistoriqueComponent } from './pages/historique/historique.component';
 
 const appRoute: Routes = [
   {path: 'creer-bac', component: AjouterBacComponent},
-  {path: 'creer-plante', component: AjouterPlanteComponent}
+  {path: 'editer-bac', component: EditeBacComponent},
+  {path: 'send-captor', component: CaptorFormComponent},
+  {path: 'jardin', component: JardinComponent},
+  {path: 'historique/:id', component: HistoriqueComponent},
+  {path: '', redirectTo: '/jardin', pathMatch: 'full'}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     AjouterBacComponent,
-    AjouterPlanteComponent
+    EditeBacComponent,
+    CaptorFormComponent,
+    JardinComponent,
+    BacComponentComponent,
+    HistoriqueComponent
   ],
   imports: [
     RouterModule.forRoot(appRoute),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

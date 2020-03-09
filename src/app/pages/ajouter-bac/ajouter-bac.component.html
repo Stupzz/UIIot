@@ -1,1 +1,14 @@
-<p>ajouter-bac works!</p>
+<div class="flex-center">
+  <div class="self-border flex-element container">
+    <label>
+      Veuillez saisir l'id du bac à creer :
+      <input type="number" class="defined-width" [(ngModel)]="idBac">
+    </label>
+    <br>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <button type="button" class="btn btn-secondary" (click)="envoyerFormulaire()">Envoyez</button>
+</div>

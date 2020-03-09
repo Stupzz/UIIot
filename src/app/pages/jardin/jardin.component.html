@@ -1,0 +1,16 @@
+<div class="flex-center">
+  <div class="self-border flex-element container">
+    <label>
+      Veuillez choisir votre bac :
+      <select class="auto-width" (ngModelChange)=selectBacEvent($event) [(ngModel)]="idBac">
+        <option *ngFor="let bac of listBac" [value]="bac.id" >{{bac.id}}</option>
+      </select>
+    </label>
+    <div *ngIf="selectedBac" class="flex-app">
+      <app-bac-component [bac]="selectedBac"></app-bac-component>
+      <button type="button" class="btn btn-secondary" (click)="goToHistorique()">Voir l'historique</button>
+    </div>
+  </div>
+
+</div>
+
