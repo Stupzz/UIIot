@@ -18,7 +18,7 @@ export class AjouterBacComponent implements OnInit {
   }
 
   envoyerFormulaire() {
-    this.httpClient.post('http://localhost:8080/api/bacs', this.idBac).subscribe(
+    this.httpClient.post('http://192.168.43.233:8080/api/bacs', this.idBac).subscribe(
       value => {
       }
     );

@@ -8,8 +8,9 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./historique.component.scss']
 })
 export class HistoriqueComponent implements OnInit {
-  private idBac: any;
-  public listHistorique
+  public idBac: any;
+  public listHistorique;
+  public historiqueLoaded = false;
 
   constructor(private route: ActivatedRoute, private httpClient: HttpClient) {
   }
@@ -17,9 +18,10 @@ export class HistoriqueComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.idBac = +params['id'];
-      this.httpClient.get(`http://localhost:8080/api/historique/${this.idBac}`).subscribe(
+      this.httpClient.get(`http://192.168.43.233:8080/api/historique/${this.idBac}`).subscribe(
         value => {
           this.listHistorique = value as Array<any>;
+          this.historiqueLoaded = true;
         });
     });
   }

@@ -15,7 +15,7 @@ export class JardinComponent implements OnInit {
   constructor(private httpClient: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
-    this.httpClient.get('http://localhost:8080/api/bacs').subscribe(
+    this.httpClient.get('http://192.168.43.233:8080/api/bacs').subscribe(
       value => {
         // @ts-ignore
         this.listBac = value as Array<any>;

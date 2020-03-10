@@ -24,7 +24,7 @@ export class EditeBacComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.httpClient.get('http://localhost:8080/api/bacs').subscribe(
+    this.httpClient.get('http://192.168.43.233:8080/api/bacs').subscribe(
       value => {
         this.listBac = value as Array<any>;
       }
@@ -55,7 +55,7 @@ export class EditeBacComponent implements OnInit {
       // tslint:disable-next-line:max-line-length
       temperatureVoulu: [Math.min(this.temperatureVouluMin, this.temperatureVouluMax), Math.max(this.temperatureVouluMin, this.temperatureVouluMax)]
     };
-    this.httpClient.post('http://localhost:8080/api/bacs/editer', bac).subscribe(
+    this.httpClient.post('http://192.168.43.233:8080/api/bacs/editer', bac).subscribe(
       value => {
       }
     );

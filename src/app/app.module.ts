@@ -7,11 +7,15 @@ import {AjouterBacComponent} from './pages/ajouter-bac/ajouter-bac.component';
 import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+// For MDB Angular Free
+import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
 import { EditeBacComponent } from './pages/edite-bac/edite-bac.component';
 import { CaptorFormComponent } from './pages/captor-form/captor-form.component';
 import { JardinComponent } from './pages/jardin/jardin.component';
 import { BacComponentComponent } from './components/bac-component/bac-component.component';
 import { HistoriqueComponent } from './pages/historique/historique.component';
+import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { DatePipe } from '@angular/common';
 
 const appRoute: Routes = [
   {path: 'creer-bac', component: AjouterBacComponent},
@@ -30,16 +34,19 @@ const appRoute: Routes = [
     CaptorFormComponent,
     JardinComponent,
     BacComponentComponent,
-    HistoriqueComponent
+    HistoriqueComponent,
+    LineChartComponent
   ],
   imports: [
     RouterModule.forRoot(appRoute),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ChartsModule,
+    WavesModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule {
