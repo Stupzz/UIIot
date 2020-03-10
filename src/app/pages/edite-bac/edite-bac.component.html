@@ -12,15 +12,6 @@
 
     <div *ngIf="selectedBac" class="flex-app">
       <label>
-        Veuillez saisir la temperature minimal du bac :
-        <input type="number" step="0.1" class="defined-width"[(ngModel)]="temperatureVouluMin" [value]="temperatureVouluMin"> °C
-      </label>
-      <label>
-        Veuillez saisir la temperature maximal du bac :
-        <input type="number" step="0.1" class="defined-width"[(ngModel)]="temperatureVouluMax" [value]="temperatureVouluMax"> °C
-      </label>
-
-      <label>
         Veuillez saisir le taux d'humidité minimal du bac :
         <input type="number" step="0.1" min="0" max="100"  class="defined-width"[(ngModel)]="tauxHumiditeVouluMin" [value]="tauxHumiditeVouluMin"> %
       </label>
@@ -28,6 +19,15 @@
       <label>
         Veuillez saisir le taux d'humidité maximal du bac :
         <input type="number" step="0.1" min="0" max="100"  class="defined-width" [(ngModel)]="tauxHumiditeVouluMax" [value]="tauxHumiditeVouluMax"> %
+      </label>
+
+      <label>
+        Veuillez saisir la temperature minimal du bac :
+        <input type="number" step="0.1" class="defined-width"[(ngModel)]="temperatureVouluMin" [value]="temperatureVouluMin"> °C
+      </label>
+      <label>
+        Veuillez saisir la temperature maximal du bac :
+        <input type="number" step="0.1" class="defined-width"[(ngModel)]="temperatureVouluMax" [value]="temperatureVouluMax"> °C
       </label>
 
       <label>
