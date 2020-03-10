@@ -51,7 +51,7 @@ export class EditeBacComponent implements OnInit {
       // tslint:disable-next-line:max-line-length
       tauxHumiditeVoulu: [Math.min(this.tauxHumiditeVouluMin, this.tauxHumiditeVouluMax), Math.max(this.tauxHumiditeVouluMin, this.tauxHumiditeVouluMax),],
       // tslint:disable-next-line:max-line-length
-      tauxLuminositeVoulu: [Math.min(this.tauxLuminositeVouluMin, this.tauxLuminositeVouluMin), Math.max(this.tauxLuminositeVouluMin, this.tauxLuminositeVouluMin)],
+      tauxLuminositeVoulu: [Math.min(this.tauxLuminositeVouluMin, this.tauxLuminositeVouluMin), Math.max(this.tauxLuminositeVouluMin, this.tauxLuminositeVouluMax)],
       // tslint:disable-next-line:max-line-length
       temperatureVoulu: [Math.min(this.temperatureVouluMin, this.temperatureVouluMax), Math.max(this.temperatureVouluMin, this.temperatureVouluMax)]
     };
