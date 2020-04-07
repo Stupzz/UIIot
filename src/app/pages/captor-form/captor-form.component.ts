@@ -20,7 +20,7 @@ export class CaptorFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.httpClient.get('http://192.168.43.233:8080/api/bacs').subscribe(
+    this.httpClient.get('http://localhost:8080/api/bacs').subscribe(
       value => {
         this.listBac = value as Array<any>;
       }
@@ -46,7 +46,7 @@ export class CaptorFormComponent implements OnInit {
       temperature: this.temperature
     };
 
-    this.httpClient.post('http://192.168.43.233:8080/api/bacs/capteur', captor).subscribe(
+    this.httpClient.post('http://localhost:8080/api/bacs/capteur', captor).subscribe(
       value => {
       }
     );
