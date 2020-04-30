@@ -24,7 +24,7 @@
     "bootstrap": "^4.4.1",
     "bootstrap-icons": "^1.0.0-alpha2",
     "chart.js": "^2.9.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mdbootstrap": "^4.14.0",
     "ngx-bootstrap": "^5.3.2",
     "popper.js": "^1.16.0",
